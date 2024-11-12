@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { logout } from '../utils/logout'; 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -19,6 +19,13 @@ const Navbar = () => {
           <a href="/about" className="hover:text-blue-300">About</a>
           <a href="/services" className="hover:text-blue-300">Services</a>
           <a href="/contact" className="hover:text-blue-300">Contact</a>
+         
+   
+        {/* Other navbar items */}
+     
+          <button onClick={logout} className="logout-button">Logout</button>
+     
+     
         </div>
 
         {/* Mobile Menu Button */}
@@ -50,6 +57,7 @@ const Navbar = () => {
         <a href="/about" className="block hover:text-blue-300">About</a>
         <a href="/services" className="block hover:text-blue-300">Services</a>
         <a href="/contact" className="block hover:text-blue-300">Contact</a>
+        <button onClick={logout} className="logout-button">Logout</button>
       </div>
     </nav>
   );
